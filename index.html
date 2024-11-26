@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X0Software - Game Modifications</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="gradient-bg text-white min-h-screen">
+
+  <!-- Dynamic background elements -->
+    <div id="particles-js"></div>
+    <div class="glow-effect glow-1"></div>
+    <div class="glow-effect glow-2"></div>
+    <div class="glow-effect glow-3"></div>
+    <div class="ripple-container"></div>
+    <div class="matrix-effect"></div>
+    
+    <!-- Main content wrapper -->
+    <div class="content-wrapper">
+
+        <!-- Logo section with enhanced glow -->
+        <div class="flex justify-center py-6 relative">
+            <img src="https://i.postimg.cc/kXz23VPq/4cddddf12349ebf51e094342d8d81dfd-processed.png" 
+                 alt="X0Software Logo" 
+                 class="h-16 relative z-10 hover:brightness-125 transition-all duration-300">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                        w-32 h-16 bg-blue-500 opacity-20 filter blur-xl"></div>
+        </div>
+
+                    <!-- Trust Section -->
+<div class="max-w-7xl mx-auto px-4 mb-12">
+  <h2 class="text-2xl font-bold text-blue-400 mb-6">Why Trust X0Software?</h2>
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Security Card -->
+      <div class="bg-gray-800/50 rounded-lg p-6 border border-cyan-500/20 backdrop-blur-md hover:border-cyan-400/30 transition-all duration-300">
+          <div class="flex items-center mb-4">
+              <div class="bg-blue-500/10 p-3 rounded-lg mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-white-300">Advanced Security</h3>
+          </div>
+          <p class="text-gray-300 text-sm">Our software uses advanced encryption and security measures to protect your account.  </p>
+      </div>
+
+      <!-- Testing Card -->
+      <div class="bg-gray-800/50 rounded-lg p-6 border border-cyan-500/20 backdrop-blur-md hover:border-cyan-400/30 transition-all duration-300">
+          <div class="flex items-center mb-4">
+              <div class="bg-blue-500/10 p-3 rounded-lg mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-white-300">Tested and Verified </h3>
+          </div>
+          <p class="text-gray-300 text-sm">All of our software is tested, updated, and verfied with the latest standards. </p>
+      </div>
+
+      <!-- Support Card -->
+      <div class="bg-gray-800/50 rounded-lg p-6 border border-cyan-500/20 backdrop-blur-md hover:border-cyan-400/30 transition-all duration-300">
+          <div class="flex items-center mb-4">
+              <div class="bg-blue-500/10 p-3 rounded-lg mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                  </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-white-300">24/7 Support</h3>
+          </div>
+          <p class="text-gray-300 text-sm">Our dedicated support team is available around the clock to assist you with any issues or questions you may have.</p>
+      </div>
+  </div>
+
+
+        <main class="max-w-7xl mx-auto px-4 py-8">
+            <!-- Featured Mods Section -->
+            <section id="mods" class="mb-12">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 id="featured-mods" class="text-2xl font-bold text-blue-400">Featured Mods</h2>
+                    <div class="flex items-center space-x-4">
+                        <select id="sortSelect" 
+                                class="bg-gray-800 bg-opacity-50 text-white rounded px-3 py-1 text-sm 
+                                       backdrop-blur-md border border-cyan-500/20 focus:border-cyan-400/50 
+                                       outline-none transition-all duration-300">
+                            <option value="popular">Most Popular</option>
+                            <option value="latest">Latest</option>
+                            <option value="rating">Top Rated</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="modsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Mod cards will be dynamically inserted here -->
+                </div>
+            </section>
+
+            <!-- Recent Updates Section -->
+            <section id="updates" class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-blue-400">Recent Updates</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-gray-800 bg-opacity-50 rounded-lg p-4 border border-cyan-500/20 
+                                backdrop-blur-md hover:border-cyan-400/30 transition-all duration-300">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-semibold text-blue-300">B06 Warzone v2.4.1</h3>
+                            <span class="text-xs text-cyan-200/60">1 days ago</span>
+                        </div>
+                        <ul class="text-sm text-gray-300">
+                            <li>Added ability to create custom FOV size for specific weapons.</li>
+                            <li>Fixed a problem where "loot esp" did not work.</li>
+                            <li>Minor bug fixes.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-800 bg-opacity-50 rounded-lg p-4 border border-cyan-500/20 
+                                backdrop-blur-md hover:border-cyan-400/30 transition-all duration-300">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-semibold text-blue-300">X0 Fortnite ESP v2.1.0</h3>
+                            <span class="text-xs text-cyan-200/60">18 days ago</span>
+                        </div>
+                        <ul class="text-sm text-gray-300">
+                            <li>Fixed issue where 'ESP Distance' tab was not working.</li>
+                            <li>Fixed issue where 'Target Bone' options were not working.</li>
+                            <li>Increased accuracy of 'Aim Smoothing'</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Reviews Section -->
+            <div id="scrollableReviews"></div>
+          </div>
+
+            <!-- Trust Stats -->
+  <div class="max-w-7xl mx-auto px-4 rounded-lg p-6 border border-blue-500/20">
+    <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="flex items-center mb-4 md:mb-0">
+            <div class="bg-blue-500/10 p-3 rounded-lg mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-blue-400">Verified Software Provider</h3>
+                <p class="text-sm text-white-300/70">All software is tested and verified for safety</p>
+            </div>
+        </div>
+        <div class="flex space-x-6">
+            <div class="text-center">
+                <div class="text-lg font-bold text-white-400">99.9%</div>
+                <div class="text-xs text-gray-400">Success Rate</div>
+            </div>
+            <div class="text-center">
+                <div class="text-lg font-bold text-white-400">500+</div>
+                <div class="text-xs text-gray-400">Happy Custys</div>
+            </div>
+            <div class="text-center">
+                <div class="text-lg font-bold text-white-400">0%</div>
+                <div class="text-xs text-gray-400">Detection Rate.</div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Stats Grid -->
+<div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 mb-4 mt-8">
+  <div class="bg-gray-800/50 p-4 rounded-lg border border-blue-500/20 backdrop-blur-sm text-center">
+      <div class="text-xl font-bold text-blue-400">500+</div>
+      <div class="text-xs text-gray-400">Active Users</div>
+  </div>
+  <div class="bg-gray-800/50 p-4 rounded-lg border border-blue-500/20 backdrop-blur-sm text-center">
+      <div class="text-xl font-bold text-blue-400">24/7</div>
+      <div class="text-xs text-gray-400">Support</div>
+  </div>
+  <div class="bg-gray-800/50 p-4 rounded-lg border border-blue-500/20 backdrop-blur-sm text-center">
+      <div class="text-xl font-bold text-blue-400">1K+</div>
+      <div class="text-xs text-gray-400">Downloads</div>
+  </div>
+  <div class="bg-gray-800/50 p-4 rounded-lg border border-blue-500/20 backdrop-blur-sm text-center">
+      <div class="text-xl font-bold text-blue-400">4.8/5</div>
+      <div class="text-xs text-gray-400">User Rating</div>
+  </div>
+</div>
+
+        <!-- Footer -->
+        <footer class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center text-sm text-cyan-200/60">
+                <div>© X0Software 2024. All rights reserved.</div>
+                <div class="flex space-x-4">
+                    <a href="https://discord.gg/2MRTPhAJxA" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="hover:text-cyan-400 transition-colors duration-300">Discord</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles-config.js" type="module"></script>
+    <script src="background-effects.js"></script>
+    <script src="script.js"></script>
+    <script src="reviews.js"></script>
+    
+</body>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #111111 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+.loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logo-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  opacity: 0;
+  transform: scale(0.5);
+  animation: logoReveal 1.5s ease forwards;
+}
+
+.glow-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  animation: glowSpin 2s linear infinite;
+}
+
+.glow-ring:nth-child(1) {
+  border-top-color: #64ffda;
+  animation-delay: 0s;
+}
+
+.glow-ring:nth-child(2) {
+  border-right-color: #40b3ff;
+  animation-delay: -0.5s;
+}
+
+.glow-ring:nth-child(3) {
+  border-bottom-color: #7b61ff;
+  animation-delay: -1s;
+}
+
+.loading-text {
+  position: absolute;
+  bottom: -40px;
+  color: #40b3ff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: textFade 2s ease infinite;
+}
+
+@keyframes logoReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes glowSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes textFade {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #40b3ff;
+  border-radius: 50%;
+  animation: particleFloat 3s linear infinite;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-100px) translateX(50px);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="loading-screen">
+  <div class="particles" id="particles"></div>
+  <div class="logo-container">
+    <div class="glow-ring"></div>
+    <div class="glow-ring"></div>
+    <div class="glow-ring"></div>
+    <img src="https://i.postimg.cc/kXz23VPq/4cddddf12349ebf51e094342d8d81dfd-processed.png" alt="X0Software Logo" class="logo">
+    <div class="loading-text">INITIALIZING...</div>
+  </div>
+</div>
+
+<script>
+// Create floating particles
+const particles = document.getElementById('particles');
+for (let i = 0; i < 20; i++) {
+  const particle = document.createElement('div');
+  particle.className = 'particle';
+  particle.style.left = Math.random() * 100 + '%';
+  particle.style.animationDelay = Math.random() * 3 + 's';
+  particles.appendChild(particle);
+}
+
+// Remove loading screen after delay
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.querySelector('.loading-screen').classList.add('fade-out');
+    // Remove from DOM after fade out
+    setTimeout(() => {
+      document.querySelector('.loading-screen').remove();
+    }, 500);
+  }, 2500);
+});
+</script>
+
+</body>
+</html>
+</html>

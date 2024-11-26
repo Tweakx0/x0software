@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mod Details - X0Software</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for sticky footer */
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        main {
+            flex: 1;
+        }
+    </style>
+</head>
+<body class="gradient-bg text-white min-h-screen">
+    <!-- Dynamic background elements -->
+    <div id="particles-js"></div>
+    <div class="glow-effect glow-1"></div>
+    <div class="glow-effect glow-2"></div>
+    <div class="glow-effect glow-3"></div>
+    <div class="ripple-container"></div>
+    <div class="matrix-effect"></div>
+    
+    <!-- Main content wrapper -->
+    <div class="content-wrapper">
+        <!-- Logo section with enhanced glow -->
+        <div class="flex justify-center py-6 relative">
+            <img src="https://i.postimg.cc/kXz23VPq/4cddddf12349ebf51e094342d8d81dfd-processed.png" 
+                 alt="X0Software Logo" 
+                 class="h-16 relative z-10 hover:brightness-125 transition-all duration-300">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                        w-32 h-16 bg-blue-500 opacity-20 filter blur-xl"></div>
+        </div>
+
+        <main class="max-w-7xl mx-auto px-4 py-8">
+            <div id="modDetailsContainer" 
+                 class="max-w-6x1 mx-auto bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg 
+                        border border-purple-500/20 backdrop-blur-md hover:border-blue-400/30 
+                        transition-all duration-300">
+                <!-- Mod details will be dynamically inserted here -->
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-auto max-w-7xl mx-auto px-4 py-4 w-full">
+            <div class="flex justify-between items-center text-xs text-cyan-200/60">
+                <div>© X0Software 2024. All rights reserved.</div>
+                <div class="flex space-x-4">
+                    <a href="https://discord.gg/2MRTPhAJxA" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="hover:text-cyan-400 transition-colors duration-300">Discord</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles-config.js" type="module"></script>
+    <script src="background-effects.js"></script>
+    <script src="mod-details.js"></script>
+</body>
+</html>
